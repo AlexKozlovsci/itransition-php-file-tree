@@ -1,6 +1,5 @@
 <?php
 
-
 function getFilesAndDirectories($dirName)
 {
     return scandir($dirName);
@@ -39,7 +38,6 @@ function startPaint($delimiter)
     paintDirectoriesAndFiles($filesAndDirectories, $level, dirname(__FILE__), $delimiter);
 }
 
-global $delimiter;
 $sapi = php_sapi_name();
 if ($sapi=='cli')
     $delimiter = "\r\n";
